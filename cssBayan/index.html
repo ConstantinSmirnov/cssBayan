@@ -7,6 +7,7 @@
     <title>CSS Byan</title>
     <link href="./css/normilize.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div class="accordion-wrapper">
@@ -17,83 +18,88 @@
             </div>
             <div class="accordion-content">
                 <div class="accordion-item">
-                    <label class="accordion-item-label">
-                        <input type="radio" name="accordion-item" id="mainProblem">
-                        <div class="accordion-title">
-                            <span>The main thing is to find the problem</span>
-                            <div class="accordion-choose-group">
-                                <img alt="plus" class="not-show" src="./assets/plus.png"/>
-                                <img alt="plus" class="show"     src="./assets/close.png"/>
-                            </div>
+                    <input type="radio" name="accordion-item" id="mainProblem">
+                    <div class="accordion-title">
+                        <span>The main thing is to find the problem</span>
+                        <div class="accordion-choose-group">
+                            <span class="material-symbols-outlined not-show">add</span>
+                            <span class="material-symbols-outlined show">close</span>
                         </div>
-                        <div class="accordion-data">
+                    </div>
+                    <div class="accordion-data">
+                        <label for="mainProblem" class="accordion-item-label">
                             <img src="./assets/mainProblem.jpeg" alt="empty"/>
-                        </div>
-                    </label>
+                        </label>
+                        <div></div>
+                    </div>
                     <hr>
                 </div>
                 <div class="accordion-item">
-                    <label class="accordion-item-label">
-                        <input type="radio" name="accordion-item" id="workHard">
-                        <div class="accordion-title">
-                            <span>Work-hard and don't give up</span>
-                            <div class="accordion-choose-group">
-                                <img alt="plus" class="not-show" src="./assets/plus.png"/>
-                                <img alt="plus" class="show"     src="./assets/close.png"/>
-                            </div>
+                    <input type="radio" name="accordion-item" id="workHard">
+                    <div class="accordion-title">
+                        <span>Work-hard and don't give up</span>
+                        <div class="accordion-choose-group">
+                            <span class="material-symbols-outlined not-show">add</span>
+                            <span class="material-symbols-outlined show">close</span>
                         </div>
-                        <div class="accordion-data">
+                    </div>
+                    <div class="accordion-data">
+                        <label for="workHard" class="accordion-item-label">
                             <img class="gif" src="./assets/workHard.gif" alt="work-hard">
-                        </div>
-                    </label>
+                        </label>
+                        <div></div>
+                    </div>
                     <hr>
                 </div>
                 <div class="accordion-item">
-                    <label class="accordion-item-label">
-                        <input type="radio" name="accordion-item" id="friend">
-                        <div class="accordion-title">
-                            <span>Two classes of a programmer on the remote</span>
-                            <div class="accordion-choose-group">
-                                <img alt="plus" class="not-show" src="./assets/plus.png"/>
-                                <img alt="plus" class="show"     src="./assets/close.png"/>
-                            </div>
+                    <input type="radio" name="accordion-item" id="friend">
+                    <div class="accordion-title">
+                        <span>Two classes of a programmer on the remote</span>
+                        <div class="accordion-choose-group">
+                            <span class="material-symbols-outlined not-show">add</span>
+                            <span class="material-symbols-outlined show">close</span>
                         </div>
-                        <div class="accordion-data">
+                    </div>
+                    <div class="accordion-data">
+                        <label for="friend" class="accordion-item-label">
                             <img src="./assets/friend.jpeg" alt="friend">
-                        </div>
-                    </label>
-                    <hr>
-                </div>
-                <div class="accordion-item active">
-                    <label class="accordion-item-label">
-                        <input type="radio" name="accordion-item" id="relax" checked>
-                        <div class="accordion-title">
-                            <span>Take a break</span>
-                            <div class="accordion-choose-group">
-                                <img alt="plus" class="not-show" src="./assets/plus.png"/>
-                                <img alt="plus" class="show"     src="./assets/close.png"/>
-                            </div>
-                        </div>
-                        <div class="accordion-data">
-                            <img class="gif" src="./assets/relax.gif" alt="relax">
-                        </div>
-                    </label>
+                        </label>
+                        <div></div>
+                    </div>
                     <hr>
                 </div>
                 <div class="accordion-item">
-                    <label class="accordion-item-label">
-                        <input type="radio" name="accordion-item" id="ok">
-                        <div class="accordion-title">
-                            <span>OK</span>
-                            <div class="accordion-choose-group">
-                                <img alt="plus" class="not-show" src="./assets/plus.png"/>
-                                <img alt="plus" class="show"     src="./assets/close.png"/>
-                            </div>
+                    <input type="radio" name="accordion-item" id="relax">
+                    <div class="accordion-title">
+                        <span>Take a break</span>
+                        <div class="accordion-choose-group">
+                            <span class="material-symbols-outlined not-show">add</span>
+                            <span class="material-symbols-outlined show">close</span>
                         </div>
-                        <div class="accordion-data">
+                    </div>
+                    <div class="accordion-data">
+                        <label for="relax" class="accordion-item-label">
+                            <img class="gif" src="./assets/relax.gif" alt="relax">
+                        </label>
+                        <div></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="accordion-item">
+                    <input type="radio" name="accordion-item" id="ok" checked>
+                    <div class="accordion-title">
+                        <span>OK</span>
+                        <div class="accordion-choose-group">
+                            <span class="material-symbols-outlined not-show">add</span>
+                            <span class="material-symbols-outlined show">close</span>
+                        </div>
+                    </div>
+                    <div class="accordion-data">
+                        <label for="ok" class="accordion-item-label">
                             <img src="./assets/ok.png" alt="work-again">
-                        </div>
-                    </label>
+                        </label>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </div>

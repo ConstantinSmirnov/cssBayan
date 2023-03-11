@@ -23,14 +23,6 @@
     padding: 0 2em;
 }
 
-.accordion-content {
-    color: rgb(65, 105, 255);
-}
-
-.accordion-content:hover .accordion-item {
-    color: rgb(0, 0, 0);
-}
-
 .accordion-item {
     padding: 0 2em;
     font-size: 1em;
@@ -40,6 +32,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: rgb(65, 105, 255);
+}
+
+.accordion-content:hover .accordion-title {
+    color: rgb(0, 0, 0);
 }
 
 .accordion-title .accordion-choose-group {
@@ -71,57 +68,43 @@
     transition: 0.8s;
 }
 
-.accordion-data img {
-    width: 30%;
-    transform: scale(0);
-}
-
 .accordion-data div {
     width: 1em;
     height: 1em;
     border: 1px solid;
     border-radius: 50%;
     margin-left: 1%;
+    visibility: hidden;
+}
+
+.accordion-data label img {
+    padding: 2em 0;
+    width: 100%;
+    transform: scale(0);
+}
+
+.accordion-item label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    cursor: pointer;
+    max-height: 0;
+}
+
+.accordion-item:hover .accordion-data label {
+    max-height: 20%;
+}
+
+.accordion-item:hover .accordion-data label img {
+    transform: scale(1);
 }
 
 input[type="radio"] {
-    visibility: hidden;
+    display: none;
 }
 
-.accordion-item .accordion-item-label > input[type="radio"] ~ .accordion-data img {
-    height: 0;
-    overflow: hidden;
-}
-
-.accordion-item .accordion-item-label > input[type="radio"] ~ .accordion-title img {
-    visibility: hidden;
-}
-
-.accordion-item .accordion-item-label > input[type="radio"]:checked ~ .accordion-data img {
-    transform: scale(1);
-    transition: .3s ease all;
-    height: 20%;
-    overflow: visible;
-    padding: 5% 0;
-}
-
-.accordion-item .accordion-item-label > input[type="radio"]:checked ~ .accordion-title {
-    color: rgb(0, 0, 0);
-}
-
-.accordion-item .accordion-item-label > input[type="radio"]:checked ~ .accordion-title .not-show {
-    visibility: hidden;
-}
-
-.accordion-item .accordion-item-label {
-    cursor: pointer;
-}
-
-.accordion-item .accordion-item-label:hover > input[type="radio"] ~ .accordion-title .show {
-    visibility: visible;
-}
-
-.accordion-item .accordion-item-label:hover > input[type="radio"] ~ .accordion-title .not-show {
+.accordion-title .show, .accordion-title .not-show {
     visibility: hidden;
 }
 
@@ -133,11 +116,47 @@ input[type="radio"] {
     visibility: visible;
 }
 
-.accordion-item .accordion-item-label:hover > input[type="radio"] ~ .accordion-data img {
+.accordion-item input[type="radio"]:checked ~ .accordion-title {
+    color: rgb(0, 0, 0);
+}
+
+.accordion-item input[type="radio"]:active ~ .accordion-title {
+    color: rgb(65, 105, 255);
+    opacity: 0.5;
+}
+
+.accordion-item input[type="radio"]:active ~ .accordion-data {
+    opacity: 0.5;
+}
+
+.accordion-item input[type="radio"]:active ~ .accordion-data div {
+    visibility: visible;
+}
+
+.accordion-item input[type="radio"]:checked ~ .accordion-title .not-show {
+    visibility: hidden;
+}
+
+.accordion-item input[type="radio"]:checked ~ .accordion-data label {
+    max-height: 20%;
+}
+
+.accordion-item input[type="radio"]:checked ~ .accordion-data label img {
+    transform: scale(1);
+    transition: .3s ease all;
+}
+
+.accordion-item:hover > input[type="radio"] ~ .accordion-title .show {
+    visibility: visible;
+}
+
+.accordion-item:hover > input[type="radio"] ~ .accordion-title .not-show {
+    visibility: hidden;
+}
+
+.accordion-item:hover > input[type="radio"] ~ .accordion-data label img {
     height: 20%;
     overflow: visible;
     transform: scale(1);
     transition: .8s ease all;
-    padding: 5% 0;
 }
-
