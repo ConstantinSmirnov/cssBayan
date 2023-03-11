@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&family=Roboto:wght@500;900&display=swap');
+
+.accordion-wrapper {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(242, 243, 230);
+    min-height: 100vh;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.accordion {
+    width: 90%;
+    cursor: pointer;
+    margin: 0.5em 0;
+}
+
+.accordion-header {
+    padding: 0 2em;
+}
+
+.accordion-item {
+    padding: 0 2em;
+    font-size: 1em;
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(65, 105, 255);
+}
+
+.accordion-title .accordion-choose-group {
+    display: flex;
+}
+
+.accordion-title .accordion-choose-group .not-show {
+    transform: translateX(100%);
+}
+
+/* .accordion-data:hover ~ .accordion-data {
+    display: flex;
+    transition-delay: 1s;
+    transform: scale(1);
+    transition: 0.5s;
+} */
+
+.accordion-title .accordion-choose-group img {
+    width: 1em;
+    height: 1em;
+    visibility: hidden;
+}
+
+.accordion-data {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transform: scale(1);
+    transition: 0.8s;
+}
+
+.accordion-data div {
+    width: 1em;
+    height: 1em;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-left: 1%;
+    visibility: hidden;
+}
+
+.accordion-data label img {
+    padding: 2em 0;
+    width: 100%;
+    transform: scale(0);
+}
+
+.accordion-data label span {
+    padding: 2em 0;
+    width: 100%;
+    transform: scale(0);
+    font-size: 0.7em;
+}
+
+.accordion-item label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    cursor: pointer;
+    max-height: 0;
+    /* transform: scale(0); */
+}
+
+.accordion-item:hover .accordion-data label {
+    max-height: 20%;
+}
+
+.accordion-item:hover .accordion-data label img {
+    transform: scale(1);
+}
+
+.accordion-item:hover .accordion-data label span {
+    transform: scale(1);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion-title .show, .accordion-title .not-show {
+    visibility: hidden;
+}
+
+.accordion-content:hover input[type="radio"] ~ .accordion-title .not-show {
+    visibility: visible;
+}
+
+.accordion-content:hover input[type="radio"]:checked ~ .accordion-title .show {
+    visibility: visible;
+}
+
+.accordion-item input[type="radio"]:checked ~ .accordion-title {
+    color: rgb(0, 0, 0);
+}
+
+.accordion-item input[type="radio"]:active ~ .accordion-title {
+    color: rgb(65, 105, 255);
+    opacity: 0.5;
+}
+
+.accordion-item input[type="radio"]:active ~ .accordion-data {
+    opacity: 0.5;
+}
+
+.accordion-item input[type="radio"]:active ~ .accordion-data div {
+    visibility: visible;
+}
+
+.accordion-item input[type="radio"]:checked ~ .accordion-title .not-show {
+    visibility: hidden;
+}
+
+.accordion-item input[type="radio"]:checked ~ .accordion-data label {
+    max-height: 20%;
+}
+
+.accordion-item input[type="radio"]:checked ~ .accordion-data label img {
+    transform: scale(1);
+    transition: .3s ease all;
+}
+
+.accordion-item input[type="radio"]:checked ~ .accordion-data label span {
+    transform: scale(1);
+    transition: .3s ease all;
+}
+
+.accordion-item:hover > input[type="radio"] ~ .accordion-title .show {
+    visibility: visible;
+}
+
+.accordion-item:hover > input[type="radio"] ~ .accordion-title .not-show {
+    visibility: hidden;
+}
+
+.accordion-item:hover > input[type="radio"] ~ .accordion-data label img {
+    height: 20%;
+    overflow: visible;
+    transform: scale(1);
+    transition: .8s ease all;
+}
+
+@media only screen and (max-width: 1920px)  {
+    .accordion {
+        font-size: 1em;
+    }
+    .accordion-content:hover .accordion-title {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media only screen and (max-width: 820px)  {
+    .accordion {
+        font-size: 0.8em;
+    }
+    .accordion-data label span {
+        font-size: 0.5em;
+    }
+    .accordion-item label {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px)  {
+    .accordion {
+        font-size: 0.4em;
+    }
+    .accordion-data label span {
+        font-size: 0.3em;
+    }
+    .accordion-item label {
+        width: 100%;
+    }
+}
+
